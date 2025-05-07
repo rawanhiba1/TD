@@ -1,0 +1,138 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.7); /* Black transparent */
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1001;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 32px;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.navbar-logo:hover {
+  color: var(--accent, #00e6b8);
+  transform: scale(1.07);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: 1rem;
+  gap: 2rem;
+}
+
+.nav-item {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1.5rem;
+  height: 100%;
+  transition: color 0.2s, transform 0.2s;
+}
+
+.nav-links:hover {
+  color: var(--accent, #00e6b8);
+  transform: scale(1.08);
+}
+
+.whatsapp-button {
+  background: #25D366;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+}
+
+.whatsapp-button:hover {
+  background: #128C7E;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    height: 100px;
+  }
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  .nav-links {
+    font-size: 1.1rem;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+
+  .nav-menu.active {
+    background: #fff;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    height: 60px;
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .whatsapp-button {
+    display: none;
+  }
+} 
