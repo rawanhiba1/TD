@@ -285,7 +285,7 @@ body, .home {
 /* Experience Section */
 .experience {
   padding: 80px 20px;
-  background: #f8f9fa;
+  background: rgb(18, 52, 88);
 }
 
 .experience-content {
@@ -297,12 +297,13 @@ body, .home {
 .experience h2 {
   margin-bottom: 20px;
   font-size: 2.5rem;
+  color: white;
 }
 
 .experience p {
   font-size: 1.1rem;
   line-height: 1.6;
-  color: #666;
+  color: white;
 }
 
 /* Responsive Design */
