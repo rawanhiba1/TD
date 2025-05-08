@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import useFadeInOnVisible from '../../components/useFadeInOnVisible';
 import '../../styles/Blog.css';
 
 function Blog() {
@@ -27,28 +28,60 @@ function Blog() {
     }
   ];
 
+  const heroRef = useRef(null);
+  const post1Ref = useRef(null);
+  const post2Ref = useRef(null);
+  const post3Ref = useRef(null);
+
+  useFadeInOnVisible(heroRef);
+  useFadeInOnVisible(post1Ref);
+  useFadeInOnVisible(post2Ref);
+  useFadeInOnVisible(post3Ref);
+
   return (
     <div className="blog-page">
-      <div className="blog-hero">
+      <div className="blog-hero" ref={heroRef}>
         <h1>Blog</h1>
         <p>Latest News and Insights from the Event Industry</p>
       </div>
 
       <div className="blog-content">
         <div className="blog-grid">
-          {blogPosts.map((post) => (
-            <article key={post.id} className="blog-card">
-              <div className="blog-details">
-                <span className="category-tag">{post.category}</span>
-                <span className="post-date">{post.date}</span>
-                <h2>{post.title}</h2>
-                <p>{post.excerpt}</p>
-                <Link to={`/blog/${post.id}`} className="read-more">
-                  Read More
-                </Link>
-              </div>
-            </article>
-          ))}
+          <article className="blog-card" ref={post1Ref}>
+            <div className="blog-details">
+              <span className="category-tag">{blogPosts[0].category}</span>
+              <span className="post-date">{blogPosts[0].date}</span>
+              <h2>{blogPosts[0].title}</h2>
+              <p>{blogPosts[0].excerpt}</p>
+              <Link to={`/blog/${blogPosts[0].id}`} className="read-more">
+                Read More
+              </Link>
+            </div>
+          </article>
+
+          <article className="blog-card" ref={post2Ref}>
+            <div className="blog-details">
+              <span className="category-tag">{blogPosts[1].category}</span>
+              <span className="post-date">{blogPosts[1].date}</span>
+              <h2>{blogPosts[1].title}</h2>
+              <p>{blogPosts[1].excerpt}</p>
+              <Link to={`/blog/${blogPosts[1].id}`} className="read-more">
+                Read More
+              </Link>
+            </div>
+          </article>
+
+          <article className="blog-card" ref={post3Ref}>
+            <div className="blog-details">
+              <span className="category-tag">{blogPosts[2].category}</span>
+              <span className="post-date">{blogPosts[2].date}</span>
+              <h2>{blogPosts[2].title}</h2>
+              <p>{blogPosts[2].excerpt}</p>
+              <Link to={`/blog/${blogPosts[2].id}`} className="read-more">
+                Read More
+              </Link>
+            </div>
+          </article>
         </div>
 
         <div className="blog-sidebar">

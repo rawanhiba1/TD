@@ -1,16 +1,27 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
+import useFadeInOnVisible from '../../components/useFadeInOnVisible';
 import '../../styles/Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = React.useState({
     name: '',
     email: '',
     phone: '',
     message: ''
   });
+
+  const heroRef = useRef(null);
+  const phoneCardRef = useRef(null);
+  const emailCardRef = useRef(null);
+  const whatsappCardRef = useRef(null);
+
+  useFadeInOnVisible(heroRef);
+  useFadeInOnVisible(phoneCardRef);
+  useFadeInOnVisible(emailCardRef);
+  useFadeInOnVisible(whatsappCardRef);
 
   const handleChange = (e) => {
     setFormData({
@@ -34,24 +45,24 @@ function Contact() {
 
   return (
     <div className="contact-page">
-      <div className="contact-hero">
+      <div className="contact-hero" ref={heroRef}>
         <h1>Contact Us</h1>
         <p>Get in touch with us for your event planning needs</p>
       </div>
 
       <div className="contact-content">
         <div className="contact-info">
-          <div className="info-card">
+          <div className="info-card" ref={phoneCardRef}>
             <FontAwesomeIcon icon={faPhone} />
             <h3>Phone</h3>
             <p>+971 XX XXX XXXX</p>
           </div>
-          <div className="info-card">
+          <div className="info-card" ref={emailCardRef}>
             <FontAwesomeIcon icon={faEnvelope} />
             <h3>Email</h3>
             <p>info@rsevents.com</p>
           </div>
-          <div className="info-card">
+          <div className="info-card" ref={whatsappCardRef}>
             <FontAwesomeIcon icon={faWhatsapp} />
             <h3>WhatsApp</h3>
             <p>+971 XX XXX XXXX</p>

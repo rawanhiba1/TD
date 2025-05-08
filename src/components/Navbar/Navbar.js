@@ -11,7 +11,7 @@ function Navbar() {
     <nav className="navbar">
       <div className="navbar-container">
         <Link to="/" className="navbar-logo">
-          TD EVENTS
+          <img src="/images/logo.png" alt="Trivoli Dome Logo" style={{ height: '56px', width: 'auto', display: 'block' }} />
         </Link>
         
         <div className="menu-icon" onClick={() => setIsMenuOpen(!isMenuOpen)}>

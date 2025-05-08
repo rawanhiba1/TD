@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
+import useFadeInOnVisible from '../../components/useFadeInOnVisible';
 import '../../styles/About.css';
 
 function About() {
+  const heroRef = useRef(null);
+  const section1Ref = useRef(null);
+  const section2Ref = useRef(null);
+  const section3Ref = useRef(null);
+  const section4Ref = useRef(null);
+
+  useFadeInOnVisible(heroRef);
+  useFadeInOnVisible(section1Ref);
+  useFadeInOnVisible(section2Ref);
+  useFadeInOnVisible(section3Ref);
+  useFadeInOnVisible(section4Ref);
+
   return (
     <div className="about-page">
-      <div className="about-hero">
+      <div className="about-hero" ref={heroRef}>
         <h1>About Us</h1>
         <p>Your Trusted Event Management Partner in the UAE</p>
       </div>
 
       <div className="about-content">
-        <section className="about-section">
+        <section className="about-section" ref={section1Ref}>
           <h2>Our Story</h2>
           <p>
             With years of industry expertise, the River and Sky Event Management team understands
@@ -19,7 +32,7 @@ function About() {
           </p>
         </section>
 
-        <section className="about-section">
+        <section className="about-section" ref={section2Ref}>
           <h2>Our Mission</h2>
           <p>
             We are dedicated to creating exceptional events that exceed expectations. Our mission
@@ -28,7 +41,7 @@ function About() {
           </p>
         </section>
 
-        <section className="about-section">
+        <section className="about-section" ref={section3Ref}>
           <h2>Why Choose Us?</h2>
           <div className="features-grid">
             <div className="feature-card">
@@ -50,7 +63,7 @@ function About() {
           </div>
         </section>
 
-        <section className="about-section">
+        <section className="about-section" ref={section4Ref}>
           <h2>Our Team</h2>
           <p>
             Our team consists of passionate professionals who bring creativity, expertise, and

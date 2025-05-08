@@ -131,7 +131,7 @@ function Home() {
         </div>
         <div className="hero-overlay-bg" />
         <div className="hero-center-content">
-          <h1 className="hero-title">Welcome to River & Sky Event Management!</h1>
+          <h1 className="hero-title">Welcome to Trivoly Dome!</h1>
           <p className="hero-subtitle">Welcome to your trusted partner for remarkable events in the UAE. From large celebrations to intimate gatherings, we offer comprehensive event management and staffing services to bring your vision to life with creativity and attention to detail.</p>
           <Link to="/services" className="hero-btn">OUR SERVICES</Link>
         </div>
@@ -159,7 +159,7 @@ function Home() {
       {/* Services Section */}
       <section className="services" ref={(el) => (sectionsRef.current[1] = el)}>
         <h2>Our Services</h2>
-        <div className="services-grid">
+        <div className={`services-grid ${showMore ? 'expanded' : 'collapsed'}`}>
           {services.slice(0, showMore ? services.length : 3).map((service, index) => (
             <div
               key={index}
