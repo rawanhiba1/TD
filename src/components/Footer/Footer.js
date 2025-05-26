@@ -44,7 +44,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© Copyright {new Date().getFullYear()} by - RS EVENTS</p>
+        <p>© Copyright {new Date().getFullYear()} by - TD events</p>
         <div className="legal-links">
           <Link to="/privacy">Privacy Policy</Link>
           <Link to="/cookies">Cookie Policy</Link>

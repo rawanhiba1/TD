@@ -1,7 +1,8 @@
 .footer {
-  background: #333;
-  color: white;
+  background: #f1efec;
+  color: #2d2d2d;
   padding: 60px 0 20px;
+  text-align: center;
 }
 
 .footer-content {
@@ -14,9 +15,10 @@
 }
 
 .footer-section h3 {
-  color: #fff;
+  color: #2d2d2d;
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .footer-section ul {
@@ -25,27 +27,30 @@
 }
 
 .footer-section ul li {
-  margin-bottom: 10px;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
 }
 
 .footer-section ul li a {
-  color: #ccc;
+  color: #444;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #fff;
+  color: #007bff;
 }
 
 .social-links {
   display: flex;
   gap: 20px;
+  justify-content: center;
+  margin-top: 12px;
 }
 
 .social-links a {
-  color: #fff;
-  font-size: 1.5rem;
+  color: #2d2d2d;
+  font-size: 2rem;
   transition: color 0.3s ease;
 }
 
@@ -56,17 +61,17 @@
 .footer-bottom {
   max-width: 1200px;
   margin: 40px auto 0;
-  padding: 20px;
-  border-top: 1px solid #444;
+  padding: 20px 0 0 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  border: none;
 }
 
 .footer-bottom p {
-  color: #ccc;
+  color: #444;
 }
 
 .legal-links {
@@ -75,14 +80,14 @@
 }
 
 .legal-links a {
-  color: #ccc;
+  color: #444;
   text-decoration: none;
-  font-size: 0.9rem;
+  font-size: 1rem;
   transition: color 0.3s ease;
 }
 
 .legal-links a:hover {
-  color: #fff;
+  color: #007bff;
 }
 
 @media screen and (max-width: 768px) {
